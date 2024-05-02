@@ -1,0 +1,21 @@
+
+Task:              Website
+Assigned to:       user1
+Date assigned:     10 Feb 2024
+Due date:          25 Mar 2024
+Task complete?     No
+Description:       Create a website
+
+Task:              Task Monitoring
+Assigned to:       admin
+Date assigned:     13 Mar 2024
+Due date:          27 Mar 2024
+Task complete?     No
+Description:       Monitor the tasks completed and the number of users
+
+Task:              Data cleaning
+Assigned to:       user2
+Date assigned:     None
+Due date:          06 Apr 2024
+Task complete?     No
+Description:       Collect and clean data
