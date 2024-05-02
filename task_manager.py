@@ -16,6 +16,7 @@ Create a program to manage tasks assigned to users
 #=====importing libraries===========
 from datetime import date
 
+
 # Function to display information to the users and allows them to choose an option.
 def user_menu():
 
@@ -39,6 +40,7 @@ def user_menu():
         ValueError("Invalid input")
 
     return user_input
+
 
 # Function to register new users
 def register():
@@ -73,6 +75,7 @@ def register():
         with open("user.txt", "a") as f:
             f.write(f'\n{new_user}, {password_confirm}')
     return
+
 
 # Function to assign task to users
 def assign_task():
@@ -118,6 +121,7 @@ def assign_task():
 
     return
 
+
 # Function to print out all the tasks assigned to users
 def view_task():
 
@@ -138,6 +142,7 @@ def view_task():
         print("\nNo task available\n")
 
     return
+
 
 # Function to find specified task for the user
 def find_task(user):
@@ -162,6 +167,7 @@ def find_task(user):
             print("\nNo task available\n")
 
     return
+
 
 # Function to allow only the admin to register and view statistics of the task.
 def administrator():
@@ -189,6 +195,7 @@ def administrator():
     
     return 
 
+
 # Function to display options for the admin
 def admin_options():
 
@@ -214,6 +221,7 @@ def admin_options():
         ValueError("Invalid input")
     
     return admin_input
+
 
 # Function to allow only registered users to access the file and the tasks.
 def login():
@@ -287,5 +295,6 @@ def login():
         else:
             print("Incorrect username. Please try again")
     return
+
 
 login()
