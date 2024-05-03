@@ -20,6 +20,11 @@ from datetime import date
 # Function to display information to the users and allows them to choose an option.
 def user_menu():
 
+    """
+    Display options and request user to select one of them to navigate the system.
+
+    """
+
     # List of available options to choose from
     opt = ['r', 'a', 'va', 'vm', 'e']
 
@@ -45,12 +50,21 @@ def user_menu():
 # Function to register new users
 def register():
 
+    """
+    Open and read user text file.
+        Split file content into a list of tuples
+        Extract users into a list of users only
+    
+    Allow new users to register their details and add them to the file
+
+    """
+
     # Open the file and split users into a list
     with open("user.txt", "r") as file:
         file_list = file.read().splitlines()
 
     users = []
-    password = []
+    # password = []
 
     # Loops through the list and get only users from the file.
     for i in file_list:
@@ -80,6 +94,16 @@ def register():
 # Function to assign task to users
 def assign_task():
     
+    """
+    Create date stamp when assigning a task
+    Open and read user text file.
+        Split file content into a list of tuples
+        Extract names into a list of usernames only
+
+    Verify if the user exists and then assign a task
+
+    """
+
     current_date = date.today()
     today = current_date.strftime("%d %b %Y")
 
@@ -125,6 +149,15 @@ def assign_task():
 # Function to print out all the tasks assigned to users
 def view_task():
 
+    """
+    Open and read task file.
+        Split the content where there are double lines
+        Add each task into a list 
+
+    Return list of tasks
+
+    """
+
     # Opens and split the file where there are double lines
     file = open("tasks.txt", "r")
     read_file = file.read().split("\n\n")
@@ -146,6 +179,15 @@ def view_task():
 
 # Function to find specified task for the user
 def find_task(user):
+
+    """
+    args: user
+
+    Read tasks for the specified user
+
+    Return user tasks 
+
+    """
 
     # Opens and split the file where there are double lines
     with open("tasks.txt", "r") as f:
@@ -171,6 +213,18 @@ def find_task(user):
 
 # Function to allow only the admin to register and view statistics of the task.
 def administrator():
+
+    """
+    Initialize users and tasks list
+    Open and read user file:
+        Extract all the users into a list
+    
+    Open and read tasks file:
+        Extract all the tasks into a list
+
+    Return a count of users and tasks
+
+    """
 
     # Stores users and tasks to perfom calculations
     users = []
@@ -199,6 +253,11 @@ def administrator():
 # Function to display options for the admin
 def admin_options():
 
+    """
+    Display options and allow the admin to choose.
+
+    """
+
     print("\nOptions\n")
     print("r -  Register a user")
     print("s - Display user stats")
@@ -225,6 +284,16 @@ def admin_options():
 
 # Function to allow only registered users to access the file and the tasks.
 def login():
+
+    """
+    Initialize a list of users
+    Open and read user file
+    Check if the user is authorized to navigate the system:
+        If true display appropriate functions
+
+    Use a while loop to repeat this process until the user end the program
+
+    """
 
     users = []
 
